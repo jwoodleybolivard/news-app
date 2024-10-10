@@ -30,7 +30,7 @@ La base de datos incluye 10 artículos. No sera necesario ejecutar scripts de in
 - 🍃 MongoDB (local o Atlas)
 
 ### Instalación
-
+Es importante seguir los pasos en este orden para evitar cualquier error.
 1. 📥 Clona el repositorio:
 
    ```bash
@@ -64,6 +64,7 @@ npm install
 ```
 npm start
 ```
+Después de la ejecución de este comando la app es propbable que la app te notifica que el puerto 3000 está ocupado ya que el backend lo está ocupando. para cambiar de puerto solo tienes que apretar "y" para confirmar.
 
 6. 💾 Insertar Datos en la Base de Datos
    Inecesario insertar datos ya que la base de datos está en la nube de mongoDB.
