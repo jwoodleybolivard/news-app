@@ -1,0 +1,9 @@
+.navbar {
+  background-color: #1976d2;
+  margin-bottom: 25px;
+}
+
+.title a {
+  color: white;
+  text-decoration: none;
+}
