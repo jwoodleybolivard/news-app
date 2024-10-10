@@ -26,8 +26,8 @@ La base de datos incluye 10 artículos. No sera necesario ejecutar scripts de in
 
 ### Prerrequisitos
 
-- 🟢 Node.js (versión X.X.X o superior)
-- 🍃 MongoDB (local o Atlas)
+- 🟢 Node.js (versión 8.0)
+- 🍃 MongoDB (Atlas)
 
 ### Instalación
 Es importante seguir los pasos en este orden para evitar cualquier error.
