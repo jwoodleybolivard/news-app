@@ -20,7 +20,6 @@ const router = express.Router();
  *               items:
  *                 $ref: '#/components/schemas/Article'
  */
-
 // Ruta para obtener todos los artículos
 router.get('/', getAllArticles);
 
@@ -46,22 +45,40 @@ router.get('/', getAllArticles);
  *       404:
  *         description: Artículo no encontrado
  */
-
 // Ruta para obtener un artículo por su ID
 router.get('/:id', getArticleById);
 
-// // Ruta para crear un nuevo artículo con validación de datos
-// router.post(
-//     '/',
-//     authMiddleware,
-//     [
-//         body('title').notEmpty().withMessage('El título es requerido'),
-//         body('description').isLength({ min: 10 }).withMessage('La descripción debe tener al menos 10 caracteres'),
-//         body('image').notEmpty().withMessage('La imagen es requerida'),
-//         body('videoUrl').notEmpty().withMessage('El video es requerido'),
-//     ],
-//     validateInput,
-//     createArticle
-// );
+/**
+ * @swagger
+ * /articles:
+ *   post:
+ *     summary: Crea un nuevo artículo
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Article'
+ *     responses:
+ *       201:
+ *         description: Artículo creado
+ *       400:
+ *         description: Error en la validación
+ */
+// Ruta para crear un nuevo artículo con validación de datos
+router.post(
+    '/',
+    [
+        body('title').notEmpty().withMessage('El título es requerido'),
+        body('description').isLength({ min: 10 }).withMessage('La descripción debe tener al menos 10 caracteres'),
+        body('image').notEmpty().withMessage('La imagen es requerida'),
+        body('videoUrl').notEmpty().withMessage('El video es requerido'),
+        body('author').notEmpty().withMessage('El autor es requerido'),
+    ],
+    validateInput,
+    createArticle
+);
 
 export default router;

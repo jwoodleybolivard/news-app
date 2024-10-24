@@ -7,7 +7,8 @@ const articles = [
         title: "Descubrimiento de una Nueva Especie de Delfín en el Amazonas",
         description: "Científicos han descubierto una nueva especie de delfín en el río Amazonas. Este hallazgo podría proporcionar nuevas pistas sobre la biodiversidad en la región.",
         image: "https://example.com/dolphin.jpg",
-        videoUrl: "https://www.example.com/video/dolphin-discovery"
+        videoUrl: "https://www.example.com/video/dolphin-discovery",
+        author: "Juan Pérez"
     },
     //Agrega otros artículos
 ];

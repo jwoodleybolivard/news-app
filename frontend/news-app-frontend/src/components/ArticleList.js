@@ -10,7 +10,7 @@ const ArticleList = () => {
     useEffect(() => {
         const fetchArticles = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/articles');
+                const response = await axios.get('/articles');
                 setArticles(response.data);
             } catch (error) {
                 console.error('Error fetching articles:', error);
@@ -26,6 +26,8 @@ const ArticleList = () => {
                 {articles.map(article => (
                     <Grid item xs={12} sm={6} md={4} key={article._id}>
                         <ArticleCard article={article} />
+                        <p>📅 Publicado el: {new Date(article.publishDate).toLocaleDateString()}</p>
+                        <p>✍️ Por: {article.author}</p>
                     </Grid>
                 ))}
             </Grid>

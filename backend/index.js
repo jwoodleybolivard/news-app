@@ -26,4 +26,4 @@ app.use('/articles', articleRoutes); // Ruta para las operaciones de los artícu
 app.use(errorHandler); // Middleware para el manejo de errores
 
 // Iniciar el servidor en el puerto 3001
-app.listen(3000, () => console.log('Server running on port 3000 please visit http://localhost:3000/api-docs'));
+app.listen(3001, () => console.log('Server running on port 3001. For documentation please visit http://localhost:3001/api-docs'));

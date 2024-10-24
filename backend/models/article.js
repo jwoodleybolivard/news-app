@@ -6,6 +6,8 @@ const articleSchema = new mongoose.Schema({
     description: { type: String, required: true }, // Descripción del artículo
     image: { type: String, required: true }, // URL de la imagen del artículo
     videoUrl: { type: String, required: true }, // URL del video del artículo
+    author: { type: String, required: true }, // Nombre del periodista
+    publishDate: { type: Date, default: Date.now }, // Fecha de publicación
 });
 
 // Creación del modelo Article basado en el esquema definido

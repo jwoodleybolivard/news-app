@@ -14,7 +14,7 @@ const ArticleDetail = () => {
 
     useEffect(() => {
         const fetchArticle = async () => {
-            const response = await axios.get(`http://localhost:3000/articles/${id}`);
+            const response = await axios.get(`/articles/${id}`);
             setArticle(response.data);
         };
 
@@ -44,6 +44,12 @@ const ArticleDetail = () => {
                     <Typography variant="body1" color="text.secondary">
                         {article.description}
                     </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        📅 Publicado el: {new Date(article.publishDate).toLocaleDateString()}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        ✍️ Por: {article.author}
+                    </Typography>
                     <div className="video-container">
                         {isYouTubeUrl(article.videoUrl) ? (
                             <iframe
@@ -56,7 +62,7 @@ const ArticleDetail = () => {
                                 allowFullScreen
                             ></iframe>
                         ) : (
-                            <video width="560" height="315" controls>
+                            <video width="560" height="315" controls autoPlay muted>
                                 <source src={article.videoUrl} type="video/mp4" />
                                 <source src={article.videoUrl.replace('.mp4', '.webm')} type="video/webm" />
                                 <source src={article.videoUrl.replace('.mp4', '.ogg')} type="video/ogg" />

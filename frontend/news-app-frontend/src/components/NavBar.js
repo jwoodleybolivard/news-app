@@ -11,8 +11,8 @@ const NavBar = () => {
                     <Link to="/">News App</Link>
                 </Typography>
                 <Box ml="auto"> {/* Alinear a la derecha */}
-                    <Button color="inherit" component={Link} to="/admin">
-                        Admin
+                    <Button color="inherit" component={Link} to="/create-article">
+                        Crear Artículo
                     </Button>
                 </Box>
             </Toolbar>

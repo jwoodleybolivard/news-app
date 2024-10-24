@@ -20,21 +20,23 @@ Este proyecto es una aplicación web para un sitio de noticias que permite almac
 
 ## 🗂 Contenido de la Base de Datos
 
-La base de datos incluye al menos 10 artículos. Se proporcionan scripts de inserción para configurar los datos base.
+La base de datos incluye 10 artículos. No sera necesario ejecutar scripts de inserción para configurar los datos base, ya que es Atlas la base de datos está en el cloud MongoDB.
 
 ## 🛠 Configuración y Ejecución del Proyecto
 
 ### Prerrequisitos
 
-- 🟢 Node.js (versión X.X.X o superior)
-- 🍃 MongoDB (local o Atlas)
+- 🟢 Node.js (versión 8.0)
+- 🍃 MongoDB (Atlas) No es necesario tener mongoDB para probar el proyecto, la base de datos está en el cloud MongoDB.
 
 ### Instalación
+
+Es importante seguir los pasos en este orden para evitar cualquier error.
 
 1. 📥 Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/news-app.git
+   git clone https://github.com/jwoodleybolivard/news-app.git
    cd news-app
 
    ```
@@ -42,20 +44,20 @@ La base de datos incluye al menos 10 artículos. Se proporcionan scripts de inse
 2. 📦 Instala las dependencias del servidor:
 
    ```
-   cd server
+   cd backend
    npm install
    ```
 
 3. ▶️ Inicia el servidor:
 
 ```
-npm start
+npm run dev
 ```
 
 4. 📦 Instala las dependencias de la aplicación React:
 
 ```
-cd ../client
+cd news-app-frontend
 npm install
 ```
 
@@ -65,10 +67,12 @@ npm install
 npm start
 ```
 
+Después de la ejecución de este comando la app es propbable que la app te notifica que el puerto 3000 está ocupado ya que el backend lo está ocupando. para cambiar de puerto solo tienes que apretar "y" para confirmar.
+
 6. 💾 Insertar Datos en la Base de Datos
-   Ejecuta los siguientes scripts para insertar los datos de prueba en la base de datos:
+   Inecesario insertar datos ya que la base de datos está en la nube de mongoDB.
 
 7. 📑 Documentación de la API
-   Accede a la documentación de la API en http://localhost:3000/api-docs después de iniciar el servidor.
+   Accede a la documentación de la API en http://localhost:3001/api-docs después de iniciar el servidor.
 
-🍀 ¡Buena Suerte!
+🍀 Desarrollado con ❤️ por Jean Woodley Bolivard
